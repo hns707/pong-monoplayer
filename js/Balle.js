@@ -186,11 +186,13 @@ class Balle extends ElementHtml {
                 joueur1.effetToucheBalle();
                 this._devieDirection(joueur1);
                 this._vaVersLaDroite();
+                joueur1.incrementeScore(10);
             }
             if (this._toucheJoueur2()) {
                 joueur2.effetToucheBalle();
                 this._devieDirection(joueur2);
                 this._vaVersLaGauche();
+                joueur1.incrementeScore(10);
             }
             this.gauche += this.vitesse * this.directionX;
             //si on touche une raquette on accélère la balle

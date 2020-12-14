@@ -17,11 +17,11 @@ class Controles {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if(event.key === "a"){
+            if(event.key === "ArrowUp"){
                 joueur1.monte();
                 joueur2.descend();
             }
-            if(event.key === "q"){
+            if(event.key === "ArrowDown"){
                 joueur1.descend();
                 joueur2.monte();
             }
@@ -35,8 +35,8 @@ class Controles {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait pour rien
             }
             switch (event.key) {
-                case "a":
-                case "q":
+                case "ArrowUp":
+                case "ArrowDown":
                     joueur1.bougePas()
                     joueur2.bougePas()
                     break;

@@ -87,20 +87,22 @@ body{
 
 /** les scores des joueurs **/
 .score{
-    top: 0;
-    left: 0;
+    top: 105%;
+    left: 10%;
     width: 50%;
     height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color:var(--couleur-elements);
-    opacity: 0.2;
+    font-size: 20px;
     transition: color 0.5s;
 }
-.score2{
-    left:50%;
+
+.vie{
+    top: 105%;
+    left: 80%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
 }
 
 

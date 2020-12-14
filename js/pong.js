@@ -13,7 +13,7 @@ let balle=new Balle($(".balle"));
  * @type {Joueur}
  */
 let joueur1=new Joueur($(".joueur1"),$(".score1"),$("#monte1"),$("#descend1"));
-
+let $vie = $(".vie");
 /**
  * Le joueur à droite
  * Ici, pour que ce soit plus lisible, on saute des lignes mais c'est pareil que pour joueur 1
@@ -21,7 +21,6 @@ let joueur1=new Joueur($(".joueur1"),$(".score1"),$("#monte1"),$("#descend1"));
  */
 let joueur2=new Joueur(
     $(".joueur2"),
-    $(".score2"),
     $("#monte2"),
     $("#descend2")
 );

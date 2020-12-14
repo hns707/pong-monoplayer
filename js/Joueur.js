@@ -40,6 +40,11 @@ class Joueur extends ElementHtml{
          */
         this.vitesseY=3;
         /**
+         * La vitesse de déplacement de la raquette
+         * @type {number}
+         */
+        this.vie=5;
+        /**
          * Direction dans laquelle se déplace la raquette
          * -1 vers le haut
          * 1 vers le bas
@@ -55,14 +60,14 @@ class Joueur extends ElementHtml{
      * Fait monter la raquette
      */
     monte(){
-        this.$boutonMonte.addClass("flash");
+        //this.$boutonMonte.addClass("flash");
         this.directionY=-1;
     }
      /**
      * Fait descendre la raquette
      */
     descend(){
-        this.$boutonDescend.addClass("flash");
+        //this.$boutonDescend.addClass("flash");
         this.directionY=1;
     }
      /**
@@ -99,7 +104,7 @@ class Joueur extends ElementHtml{
     incrementeScore(points){
         this.score+=points;
         this._effetScore();
-        this.$score.text(this.score);
+        this.$score.text("Score : " + this.score);
     }
     /**
      * Effet visuel (et sonore) qui se produit quand on touche la balle
@@ -113,14 +118,15 @@ class Joueur extends ElementHtml{
      * @private
      */
     _effetScore(){
-        ElementHtml.effetCss(this.$score,"flash");
+        ElementHtml.effetCss(joueur1.$score,"flash");
     }
     /**
      * Appelé quand le joueur gagne un échange
      */
     gagne(){
-        //on aumente son score
-        this.incrementeScore(10);
+        //-- sa vie
+        joueur1.vie-=1;
+        $vie.text("Vies : " + joueur1.vie);
         this._rafraichitHTML();
         audio.fausseNote();
         terrain.tilt();
