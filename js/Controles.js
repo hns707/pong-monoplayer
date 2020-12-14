@@ -19,15 +19,11 @@ class Controles {
             }
             if(event.key === "a"){
                 joueur1.monte();
+                joueur2.descend();
             }
             if(event.key === "q"){
                 joueur1.descend();
-            }
-            if(event.key === "p"){
                 joueur2.monte();
-            }
-            if(event.key === "m"){
-                joueur2.descend();
             }
             event.preventDefault(); // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
         }, true);
@@ -42,9 +38,6 @@ class Controles {
                 case "a":
                 case "q":
                     joueur1.bougePas()
-                    break;
-                case "p":
-                case "m":
                     joueur2.bougePas()
                     break;
             }
